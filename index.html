@@ -22,11 +22,11 @@
 			<nav class="site-nav">
 				<a class="logo-header" href="./index.html">Web<span class="logo-header-decor">Studio</span></a>
 				<ul class="site-nav-list list">
-					<li class="item"><a href="./index.html" class="link">Studio</a></li>
-					<li class="item">
-						<a href="./portfolio.html" class="link">Portfolio</a>
+					<li class="site-nav-item"><a href="./index.html" class="site-nav-item-link current">Studio</a></li>
+					<li class="site-nav-item">
+						<a href="./portfolio.html" class="site-nav-item-link">Portfolio</a>
 					</li>
-					<li class="item"><a href="" class="link">Contacts</a></li>
+					<li class="site-nav-item"><a href="" class="site-nav-item-link">Contacts</a></li>
 				</ul>
 			</nav>
 			<!-- Address -->
@@ -47,7 +47,21 @@
 		<section class="hero">
 			<div class="container">
 				<h1 class="hero-title">Effective Solutions for Your Business</h1>
-				<button class="button hero-button pointer" type="button"> Order Service </button>
+				<button data-modal-open class="button hero-button pointer" type="button"> Order Service </button>
+				<div data-modal class="backdrop is-hidden">
+					<div class="modal">
+						<button data-modal-close class="modal-button" type="button">X</button>
+						<p>Leave your contacts and we will call you back</p>
+						<ul class="modal-list list">
+							<li class="modal-item"><span>Name</span></li>
+							<li class="modal-item"><span>Phone</span></li>
+							<li class="modal-item"><span>Email</span></li>
+							<li class="modal-item"><span>Comment</span></li>
+						</ul>
+						<p>I accept the terms and conditions of the <a class="modal-list-link" href="">Privacy Policy</a></p>
+						<button class="modal-send-button button hero-button" type="button">Send</button>
+					</div>
+				</div>
 			</div>
 		</section>
 		<!-- Specifics -->
@@ -282,22 +296,22 @@
 				<p class="footer-text-social-media">Social media</p>
 				<ul class="footer-social-list list">
 					<li class="footer-social-item">
-						<a class="footer-social-link" href="http://"><svg class="footer-social-icon" width="24" height="24">
+						<a class="footer-social-link" href=""><svg class="footer-social-icon" width="24" height="24">
 								<use href="./images/svg-icons.svg#icon-instagram"></use>
 							</svg></a>
 					</li>
 					<li class="footer-social-item">
-						<a class="footer-social-link" href="http://"><svg class="footer-social-icon" width="24" height="24">
+						<a class="footer-social-link" href=""><svg class="footer-social-icon" width="24" height="24">
 								<use href="./images/svg-icons.svg#icon-twitter"></use>
 							</svg></a>
 					</li>
 					<li class="footer-social-item">
-						<a class="footer-social-link" href="http://"><svg class="footer-social-icon" width="24" height="24">
+						<a class="footer-social-link" href=""><svg class="footer-social-icon" width="24" height="24">
 								<use href="./images/svg-icons.svg#icon-facebook"></use>
 							</svg></a>
 					</li>
 					<li class="footer-social-item">
-						<a class="footer-social-link" href="http://"><svg class="footer-social-icon" width="24" height="24">
+						<a class="footer-social-link" href=""><svg class="footer-social-icon" width="24" height="24">
 								<use href="./images/svg-icons.svg#icon-linkedin"></use>
 							</svg></a>
 					</li>
@@ -305,6 +319,7 @@
 			</div>
 		</div>
 	</footer>
+	<script src="./js/modal.js"></script>
 </body>
 
 </html>
