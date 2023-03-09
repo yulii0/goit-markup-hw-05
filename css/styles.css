@@ -14,6 +14,7 @@
 	--card-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
 		0px 2px 1px rgba(46, 47, 66, 0.08);
 	--animation-duration: 250ms;
+	--animation-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -91,8 +92,6 @@ body {
 
 /* HEADER */
 .main-header {
-	/* padding-top: 24px;
-	padding-bottom: 24px; */
 	border-bottom: 1px solid #e7e9fc;
 	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -128,11 +127,30 @@ body {
 	border-radius: 4px;
 }
 
-.modal-button {
+.modal-close-button {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border-radius: 50%;
-	background: #E7E9FC;
+	width: 24px;
+	height: 24px;
+	background-color: #E7E9FC;
 	color: var(--primary-title-text);
 	border: 1px solid rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+.modal-close-button:is(:hover, :focus) {
+	background-color: var(--primary-pressed-state);
+	border-color: var(--primary-pressed-state);
+	color: #fff;
+}
+
+.modal-close-icon {
+	fill: currentColor;
 }
 
 /* LOGO */
@@ -649,6 +667,7 @@ address {
 
 .footer-social-link:is(:hover, :focus) {
 	background-color: var(--seccess);
+
 }
 
 .footer-social-icon {
