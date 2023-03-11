@@ -93,7 +93,7 @@ body {
 /* HEADER */
 .main-header {
 	border-bottom: 1px solid #e7e9fc;
-	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+	/* box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); */
 }
 
 /* MODAL */
@@ -141,6 +141,7 @@ body {
 	color: var(--primary-title-text);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	cursor: pointer;
+	transition: background-color var(--animation-duration) var(--animation-function), color var(--animation-duration) var(--animation-function), border var(--animation-duration) var(--animation-function);
 }
 
 .modal-close-button:is(:hover, :focus) {
@@ -151,6 +152,12 @@ body {
 
 .modal-close-icon {
 	fill: currentColor;
+}
+
+.modal-send-button {
+	position: absolute;
+	bottom: 24px;
+	left: 120px;
 }
 
 /* LOGO */
@@ -201,7 +208,6 @@ address {
 }
 
 .site-nav-item-link {
-	display: block;
 	color: var(--primary-title-text);
 	text-decoration: none;
 	font-weight: 500;
@@ -209,6 +215,8 @@ address {
 	line-height: 1.5;
 	padding: 24px 0;
 	position: relative;
+	transition: color var(--animation-duration) var(--animation-function);
+
 }
 
 .site-nav-item-link:hover,
@@ -218,13 +226,12 @@ address {
 
 .current::after {
 	content: '';
-	display: block;
 	position: absolute;
 	width: 100%;
 	height: 4px;
 	background: var(--primary-pressed-state);
 	border-radius: 2px;
-	bottom: -1px;
+	bottom: 0;
 	left: 0;
 }
 
@@ -246,6 +253,7 @@ address {
 	text-decoration: none;
 	color: var(--primary-text);
 	padding: 24px 0;
+	transition: color var(--animation-duration) var(--animation-function);
 }
 
 .contacts-email:hover,
@@ -430,6 +438,7 @@ address {
 	border-radius: 50%;
 	background-color: var(--primary-brand);
 	color: #F4F4FD;
+	transition: background-color var(--animation-duration) var(--animation-function);
 }
 
 .team-social-link:is(:hover, :focus) {
@@ -460,11 +469,14 @@ address {
 	min-width: 169px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	padding: 16px 32px 16px 32px;
+	transition: background-color var(--animation-duration) var(--animation-function);
+
 }
 
 .hero-button:hover,
 .hero-button:focus {
 	background-color: var(--primary-pressed-state);
+
 }
 
 .filter-button {
@@ -474,6 +486,7 @@ address {
 	min-width: 69px;
 	height: 48px;
 	padding: 12px 24px 12px 24px;
+	transition: color var(--animation-duration) var(--animation-function), background-color var(--animation-duration) var(--animation-function), border var(--animation-duration) var(--animation-function), box-shadow var(--animation-duration) var(--animation-function);
 }
 
 .filter-button:hover,
@@ -519,6 +532,8 @@ address {
 
 .project-list-item-link {
 	display: block;
+	overflow: auto;
+	transition: box-shadow var(--animation-duration) var(--animation-function);
 }
 
 .project-list-item-link:is(:hover, :focus) {
@@ -564,7 +579,7 @@ address {
 	background-color: var(--primary-brand);
 	opacity: 0;
 	transform: translatey(100%);
-	transition: opacity var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1), transform var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1);
+	transition: opacity var(--animation-duration) var(--animation-function), transform var(--animation-duration) var(--animation-function);
 }
 
 .project-thumb-text {
@@ -575,7 +590,8 @@ address {
 	color: #F4F4FD;
 	opacity: 0;
 	transform: translatey(100%);
-	transition: opacity var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1), transform var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1);
+	overflow: auto;
+	transition: opacity var(--animation-duration) var(--animation-function), transform var(--animation-duration) var(--animation-function);
 }
 
 /* CUSTOMERS */
@@ -602,6 +618,7 @@ address {
 	border-radius: 4px;
 	padding: 16px 32px;
 	color: #AFB1B8;
+	transition: color var(--animation-duration) var(--animation-function), border var(--animation-duration) var(--animation-function);
 }
 
 .customer-link:is(:hover, :focus) {
@@ -663,6 +680,7 @@ address {
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
 	color: #F4F4FD;
+	transition: background-color var(--animation-duration) var(--animation-function);
 }
 
 .footer-social-link:is(:hover, :focus) {
