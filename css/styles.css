@@ -231,7 +231,7 @@ address {
 	height: 4px;
 	background: var(--primary-pressed-state);
 	border-radius: 2px;
-	bottom: 0;
+	bottom: -1px;
 	left: 0;
 }
 
